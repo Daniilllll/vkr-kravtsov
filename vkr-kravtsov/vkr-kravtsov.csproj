@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7585EF7D-0D68-44FA-9EBF-C938C3662B75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>vkr_kravtsov</RootNamespace>
+    <AssemblyName>vkr-kravtsov</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.2.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="dogovor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dogovor.Designer.cs">
+      <DependentUpon>dogovor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="postavki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postavki.Designer.cs">
+      <DependentUpon>postavki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sotrudniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sotrudniki.Designer.cs">
+      <DependentUpon>sotrudniki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zakaz.Designer.cs">
+      <DependentUpon>zakaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plateh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plateh.Designer.cs">
+      <DependentUpon>plateh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForma.Designer.cs">
+      <DependentUpon>loginForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="postavhik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postavhik.Designer.cs">
+      <DependentUpon>postavhik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tovar.Designer.cs">
+      <DependentUpon>tovar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dogovor.resx">
+      <DependentUpon>dogovor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plateh.resx">
+      <DependentUpon>plateh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postavhik.resx">
+      <DependentUpon>postavhik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForma.resx">
+      <DependentUpon>loginForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postavki.resx">
+      <DependentUpon>postavki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="tovar.resx">
+      <DependentUpon>tovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sotrudniki.resx">
+      <DependentUpon>sotrudniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zakaz.resx">
+      <DependentUpon>zakaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
